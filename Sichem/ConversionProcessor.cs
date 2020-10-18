@@ -604,7 +604,6 @@ namespace Sichem
 
 			if (_parameters.SkipVariables.Contains(info.Spelling))
 			{
-				Console.WriteLine($"FOUND VARIABLE TO SKIP!!!!");
 				left = "";
 				right = "";
 				return;
