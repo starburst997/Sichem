@@ -602,6 +602,14 @@ namespace Sichem
 
 			var name = info.Spelling.FixSpecialWords();
 
+			if (_parameters.SkipVariables.Contains(info.Spelling))
+			{
+				Console.WriteLine($"FOUND VARIABLE TO SKIP!!!!");
+				left = "";
+				right = "";
+				return;
+			}
+			
 			if (size > 0)
 			{
 				rvalue = ProcessPossibleChildByIndex(info.Cursor, size - 1);
